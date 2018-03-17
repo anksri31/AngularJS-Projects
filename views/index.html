@@ -1,0 +1,26 @@
+<!doctype html>
+<html >
+    <head>
+            <script src="../scripts/angular.js"></script>
+            <script src="../scripts/index.js"></script>
+    </head>
+  <body ng-app="myApp" ng-controller="myController">
+      <span>Please Enter you Name</span>
+   <input type="text" ng-model="name">
+   <!-- <div ng-if="name"> -->
+        <span >Hi {{name}}</span>
+        <span >Create you shopping list</span>
+        <ul>
+           <li ng-repeat="product in products">{{product}}<span style="color:red" 
+            ng-click="removeItem($index)">X</span></li>
+            </ul>
+            <input ng-model="addMe">
+  <button ng-click="addItem()">Add</button>
+   <!-- </div> -->
+  
+   
+       
+
+   
+  </body>
+</html>
